@@ -1,0 +1,48 @@
+<html>
+
+    <head>
+    <title>Javascript</title>
+    </head>
+    
+    <body> 
+        <span id="dotRed" class="dot"></span>
+        <span id="dotBlue" class="dot"></span>
+        <span id="dotYellow" class="dot"></span>
+    </body>
+    
+    <script type="text/javascript">
+        document.getElementById("dotRed").onclick = function() {
+           document.getElementById("dotRed").style.display = "none"; 
+        }
+        
+        document.getElementById("dotBlue").onclick = function() {
+            document.getElementById("dotBlue").style.display = "none"; 
+        }
+        
+        document.getElementById("dotYellow").onclick = function() {
+            document.getElementById("dotYellow").style.display = "none"; 
+        }
+    </script>
+    
+    <style>
+        #dotRed{
+            background-color: red;
+        }
+        
+        #dotBlue{
+            background-color: blue;
+        }
+        
+        #dotYellow{
+            background-color: yellow;
+        }
+        
+        .dot {
+          height: 50px;
+          width: 50px;
+          border-radius: 50%;
+          display: inline-block;
+        }
+    </style>
+    
+</html>

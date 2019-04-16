@@ -1,0 +1,39 @@
+<html>
+
+    <head>
+    <title>Javascript</title>
+    </head>
+    
+    <body> 
+        
+        <p>Qunte dita sto mostrando ?</p>
+        
+        <input type="text" id="fingerIThink">
+            
+        <button id="button">Invia</button>
+                
+    </body>
+    
+    <script type="text/javascript">
+        
+    document.getElementById("button").onclick = function(){
+        var fingerIThink = document.getElementById("fingerIThink").value;
+             
+        realFinger = Math.floor(Math.random() * 6);
+        
+        if(realFinger == fingerIThink){
+            alert("Esatto sono " + realFinger)
+        }else{
+            alert("Sbagliato le dita erano " + realFinger)
+        }
+            
+    }
+        
+    </script>
+    
+    <style>
+        
+        
+    </style>
+    
+</html>

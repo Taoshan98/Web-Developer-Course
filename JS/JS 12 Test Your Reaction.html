@@ -1,0 +1,61 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Javascript</title>
+	</head>
+	
+	<body>
+		<div>
+			<h2>Test Your Reaction</h2>
+			<p>Clicca sulle forme più volecemente che puoi!</p>
+			<p><b>Il tuo tempo: <span id="time"></span></b></p>
+		</div>
+		<br>
+		<div id="shapes"></div>
+	</body>
+</html>
+
+<script>
+    var start = new Date().getTime();
+    
+    function getRandomColor() {
+        var letters = '0123456789ABCDEF';
+        var color = '#';
+        for (var i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+
+    function makeShapeAppear(){
+	    document.getElementById("shapes").style.top = (Math.random() * 200) + "px";
+        document.getElementById("shapes").style.right = (Math.random() * 200) + "px";
+        document.getElementById("shapes").style.left = (Math.random() * 200) + "px"
+	    
+	    if(Math.random() > 0.5){
+            document.getElementById("shapes").style.borderRadius = "50%";
+        }else{
+            document.getElementById("shapes").style.borderRadius = "0";
+        }
+        document.getElementById("shapes").style.width = ((Math.random() * 250) + 100) + "px";
+        document.getElementById("shapes").style.height = ((Math.random() * 250) + 100) + "px";
+        document.getElementById("shapes").style.backgroundColor = getRandomColor();
+
+        document.getElementById("shapes").style.display = "block";
+        start = new Date().getTime();
+    }
+    
+    function appearAfterDelay(){
+        setTimeout(makeShapeAppear, Math.random() * 2000);
+    }
+
+    appearAfterDelay();
+    
+    document.getElementById("shapes").onclick = function () {
+	    var end = new Date().getTime();
+        document.getElementById("shapes").style.display = "none";
+        document.getElementById("time").innerHTML = ((end - start) / 1000) + "s";
+        appearAfterDelay();
+    };
+	
+</script>

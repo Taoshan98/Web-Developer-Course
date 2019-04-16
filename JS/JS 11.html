@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <title>Javascript</title>
+</head>
+
+<body>
+
+<p>Qunte dita sto mostrando ?</p>
+
+<input type="text" id="myNumber">
+
+<button id="button">Invia</button>
+
+</body>
+
+<script type="text/javascript">
+
+    document.getElementById("button").onclick = function(){
+
+        var myNumber = document.getElementById("myNumber").value;
+
+        var gotIT = false;
+
+        var numberOfGuesses = 1;
+
+        if(myNumber < 6){
+            while(gotIT == false){
+                var guess = Math.floor(Math.random() * 6);
+                if(guess == myNumber){
+                    gotIT = true;
+                    alert("Indovinato era " + guess + " ha indovinato alla " +  numberOfGuesses + " volta");
+                }else{
+                    numberOfGuesses++;
+                }
+            }
+        }else{
+            alert("Il numero inserito è maggiore di 5");
+        }
+    }
+</script>
+
+</html>

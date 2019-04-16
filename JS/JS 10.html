@@ -1,0 +1,30 @@
+<html>
+
+    <head>
+    <title>Javascript</title>
+    </head>
+    
+    <body>
+    
+        <div id="tweetDiv"></div>
+    
+    </body>
+   
+    
+    <script type="text/javascript">
+        
+        var tweetSring = "";
+    
+        var tweets = ["Hi" , "I love cornfalkes", "Night night :)", "somthings", "wow"];
+        
+        for(var i = 0; i < tweets.length; i++){
+            
+            tweetSring = tweetSring + "<p>" + tweets[i] + "</p>";
+            
+            document.getElementById("tweetDiv").innerHTML = tweetSring;
+            
+        }
+
+    </script>
+
+</html>
