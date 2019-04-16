@@ -1,0 +1,40 @@
+<html>
+
+    <head>
+    <title>Javascript</title>
+    </head>
+    
+    <body> 
+        
+        <input type="text" id="pwd">
+            
+        <button id="button">Invia</button>
+                
+    </body>
+    
+    <script type="text/javascript">
+        
+    document.getElementById("button").onclick = function(){
+        var pwd = document.getElementById("pwd").value;
+            
+        var realPwd = "ciao"; 
+        
+        if(pwd == realPwd){
+            alert("password giusta");
+        }else{
+            alert("password non giusta");
+        }
+            
+    }
+        
+        
+
+        
+    </script>
+    
+    <style>
+        
+        
+    </style>
+    
+</html>
