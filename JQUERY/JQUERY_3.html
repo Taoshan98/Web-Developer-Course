@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+
+
 <head>
 	<style>
 		
@@ -10,13 +12,6 @@
 			background-color: green;
 			margin: 10px;
 		}
-		
-		.squareRed {
-			height: 50px;
-			width: 50px;
-			background-color: red;
-			margin: 10px;
-		}
 	</style>
 	
 	<meta charset="UTF-8">
@@ -25,19 +20,15 @@
 <body>
 
 <div id="dotGreen"></div>
-<div class="squareRed"></div>
-<div class="squareRed"></div>
+
+<iframe frameborder="1" width="420" height="345" src="http://serv4.verzoeksysteem.nl/verzoek/?rs=2339"></iframe>
 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 <script>
-    $("#dotRed").click(function () {
-	    alert("il cerchio è stato cliccato");
-    });
-    
-    $(".squareRed").click(function () {
-        alert("il quadrato è stato cliccato");
-    });
-    
+
+	$('#dotRed').hover(function () {
+        $('iframe').attr("src", "https://www.ecowebhosting.co.uk");
+    })
 
 </script>
 </body>
