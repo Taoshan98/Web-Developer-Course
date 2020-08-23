@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Jquery</title>
+</head>
+<body>
+
+<p id="para"></p>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script>
+
+    $.ajax("info.txt")
+        .done(function (data) {
+            $('#para').html(data)
+        })
+        .fail(function () {
+            alert("could not get data");
+        });
+
+</script>
+</body>
+</html>

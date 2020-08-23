@@ -1,0 +1,70 @@
+body {
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+#navbar {
+    width: 100%;
+    background-color: #EEEEEE;
+    padding: 5px;
+    height: 30px;
+}
+
+#logo {
+    float: left;
+    font-weight: bold;
+    font-size: 120%;
+    padding: 3px 5px;
+}
+
+#buttonContainer {
+    margin: 0 auto;
+}
+
+.toggleButton {
+    float: left;
+    border: 1px solid grey;
+    padding: 6px;
+    border-right: none;
+    font-size: 90%;
+}
+
+#output {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-right: 1px solid grey;
+}
+
+#html {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.active {
+    background-color: #E8F2FF;
+}
+
+.highlightedButton {
+    background-color: #aba5a5;
+}
+
+textarea {
+    resize: none;
+    border-color: black;
+    height: 100%;
+}
+
+.panel {
+    float: left;
+    width: 50%;
+}
+
+iframe {
+    border: 1px solid black;
+    height: 99.5%;
+}
+
+.hidden {
+    display: none;
+}
